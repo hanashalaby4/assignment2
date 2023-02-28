@@ -24,6 +24,9 @@ int main()
 	A = new point[n];
 	B = new point[n];
 	P = new point[m];
+	randomizeA(A, n);
+	randomizeB(B, n);
+	generateP(P, m);
 	Center(A, n);
 	Center(B, n);
 	for (int i = 0; i < m; i++)
