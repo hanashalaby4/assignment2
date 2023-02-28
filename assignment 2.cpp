@@ -34,7 +34,7 @@ int main()
 	delete[]A;
 	delete[]B;
 }
-point Center(point* C, int n)
+point Center(const point* C, int n)
 {
 	float sumX = 0;
 	float sumY = 0;
@@ -58,10 +58,10 @@ void checkDist(const point& centerA, const point& centerB, const point& p)
 
 	if (distB > distA)
 	{
-		cout << "the point p is closer to the center A";
+		cout << "the point p is closer to the center A" << endl;
 	}
 	else
-		cout << "the point p is closer to the center B";
+		cout << "the point p is closer to the center B" << endl;
 }
 void randomizeA(point* A, int n)
 {

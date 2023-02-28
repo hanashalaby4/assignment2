@@ -1,6 +1,6 @@
 #pragma once
-#ifndef POINT_H
-#define POINT_H
+#ifndef Point_H
+#define Point_H
 #include <iostream>
 #include <cmath>
 using namespace std;
