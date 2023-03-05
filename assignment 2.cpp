@@ -10,11 +10,11 @@ using namespace std;
 const int n = 200;
 const int m = 20;
 
-point Center(const point* C, int n);//array of x coordinates and number of points
-void checkDist( const point& centerA, const point& centerB, const point& p);
-void randomizeB(point* B, int n);
-void randomizeA(point* A, int n);
-void generateP(point* P, int m);
+point Center(const point* C, int n);//returns average of the cluster
+void checkDist( const point& centerA, const point& centerB, const point& p); //checks distance between p and each cluster
+void randomizeB(point* B, int n);//randomize 200 coordinate pairs for cluster B
+void randomizeA(point* A, int n); //randomize 200 coordinate pairs for cluster A
+void generateP(point* P, int m); //randomize 20 points
 
 int main()
 {
@@ -32,7 +32,6 @@ int main()
 	for (int i = 0; i < m; i++)
 	{
 		checkDist(centerA, centerB, *(P+i));
-
 	}
 
 	delete[]A;
@@ -65,9 +64,7 @@ void checkDist(const point& centerA, const point& centerB, const point& p)
 	if (distB > distA)
 	{
 		cout << "the point ";
-
 		p.displayPoint();
-
 		cout << " is closer to the cluster A" << endl;
 	}
 	else
