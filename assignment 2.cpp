@@ -80,11 +80,9 @@ void randomizeA(point* A, int n)
 	for (int i = 0; i < n; i++)
 	{
 		(*(A + i)).setX(70 + (rand() % 21));
-	}
-	for (int i = 0; i < n; i++)
-	{
 		(*(A + i)).setY(70 + (rand() % 21));
 	}
+	
 }
 void randomizeB(point* B, int n)
 {
@@ -92,11 +90,9 @@ void randomizeB(point* B, int n)
 	for (int i = 0; i < n; i++)
 	{
 		(*(B + i)).setX(20 + (rand() % 21));
-	}
-	for (int i = 0; i < n; i++)
-	{
 		(*(B + i)).setY(20 + (rand() % 21));
 	}
+	
 }
 void generateP(point* P, int m)
 {
@@ -104,10 +100,8 @@ void generateP(point* P, int m)
 	for (int i = 0; i < m; i++)
 	{
 		(*(P + i)).setX(5 + (rand() % 101));
-	}
-	for (int i = 0; i < m; i++)
-	{
 		(*(P + i)).setY(5 + (rand() % 101));
 	}
+	
 }
 
