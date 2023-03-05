@@ -35,7 +35,7 @@ public:
 	{
 		return y;
 	}
-	void displayPoint(const point& l)
+	void displayPoint() const
 	{
 		cout << "(" << x << "," << y << ")";
 	}

@@ -11,7 +11,7 @@ const int n = 200;
 const int m = 20;
 
 point Center(const point* C, int n);//array of x coordinates and number of points
-void checkDist(const point& centerA, const point& centerB, const point& p);
+void checkDist( const point& centerA, const point& centerB, const point& p);
 void randomizeB(point* B, int n);
 void randomizeA(point* A, int n);
 void generateP(point* P, int m);
@@ -27,11 +27,12 @@ int main()
 	randomizeA(A, n);
 	randomizeB(B, n);
 	generateP(P, m);
-	Center(A, n);
-	Center(B, n);
+	point centerA = Center(A, n);
+	point centerB = Center(B, n);
 	for (int i = 0; i < m; i++)
 	{
-		checkDist(*A, *B, *P);
+		checkDist(centerA, centerB, *(P+i));
+
 	}
 
 	delete[]A;
@@ -39,6 +40,7 @@ int main()
 }
 point Center(const point* C, int n)
 {
+
 	float sumX = 0;
 	float sumY = 0;
 	for (int i = 0; i < n; i++)
@@ -61,10 +63,18 @@ void checkDist(const point& centerA, const point& centerB, const point& p)
 
 	if (distB > distA)
 	{
-		cout << "the point p is closer to the center A" << endl;
+		cout << "the point ";
+
+		p.displayPoint();
+
+		cout << " is closer to the center A" << endl;
 	}
 	else
-		cout << "the point p is closer to the center B" << endl;
+	{
+		cout << "the point ";
+		p.displayPoint();
+		cout << " is closer to the center B" << endl;
+	}
 }
 void randomizeA(point* A, int n)
 {
@@ -102,3 +112,4 @@ void generateP(point* P, int m)
 		(*(P + i)).setY(5 + (rand() % 101));
 	}
 }
+
