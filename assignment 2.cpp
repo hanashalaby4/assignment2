@@ -68,13 +68,13 @@ void checkDist(const point& centerA, const point& centerB, const point& p)
 
 		p.displayPoint();
 
-		cout << " is closer to the center A" << endl;
+		cout << " is closer to the cluster A" << endl;
 	}
 	else
 	{
 		cout << "the point ";
 		p.displayPoint();
-		cout << " is closer to the center B" << endl;
+		cout << " is closer to the cluster B" << endl;
 	}
 }
 void randomizeA(point* A, int n)
