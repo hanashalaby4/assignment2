@@ -37,6 +37,7 @@ int main()
 
 	delete[]A;
 	delete[]B;
+	delete[]P;
 }
 point Center(const point* C, int n)
 {
