@@ -8,42 +8,21 @@ class point {
 private:
 	float x, y;
 public:
-	point()
-	{
-		x = 0;
-		y = 0;
-	}
-	point(float X, float Y)
-	{
-		x = X;
-		y = Y;
-	}
-	void setX(float X)
-	{
-		x = X;
+	point();
+	
+	point(float X, float Y);
+	
+	void setX(float X);
+	
+	void setY(float Y);
 
-	}
-	void setY(float Y)
-	{
-		y = Y;
-	}
-	float getX() const
-	{
-		return x;
-	}
-	float getY() const
-	{
-		return y;
-	}
-	void displayPoint() const
-	{
-		cout << "(" << x << "," << y << ")";
-	}
-	float calcDistance(const point& cluster) const
-	{
-		float distance = sqrt((pow(x, 2) - pow(cluster.getX(), 2)) + (pow(y, 2) - pow(cluster.getY(), 2)));
-		return distance;
-	}
-
+	float getX() const;
+	
+	float getY() const;
+	
+	void displayPoint() const;
+	
+	float calcDistance(const point& cluster) const;
+	
 };
 #endif
